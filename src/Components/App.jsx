@@ -9,7 +9,7 @@ function App() {
       <main className="page">
         <section className="board">
           <div className="cell">
-            <div classNameName="grogu">👣</div>
+            <div className="grogu">👣</div>
           </div>
           <div className="cell"></div>
           <div className="cell"></div>
