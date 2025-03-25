@@ -11,13 +11,35 @@ function App() {
   const [diceValue, setDiceValue] = useState(null);
   const [gameStatus, setGameStatus] = useState("En curso");
 
+  /*Cuando hagamos click en Lanzar el dado,
+  -se ejecuta la función de lanzar el dado,
+  -recoger el resultado:
+    Si es 4 --> Grogu debe de avanzar en el tablero y actualizar su posición,
+    Si es 1, 2 o 3 -> una mercancía se eliminará de la lista,
+      -actualizar la lista
+   
+  */
+
+  function getRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
+  }
+  const randomNumber = getRandomNumber(4);
+
+  function rollDice() {
+    getRandomNumber(4);
+    //const resultRandomNumber = randomNumber;
+    console.log(randomNumber);
+  }
+
   return (
     <div className="page">
       <Header />
       <main className="page">
         <Board />
         <section>
-          <button className="dice">Lanzar Dado</button>
+          <button className="dice" onClick={rollDice}>
+            Lanzar Dado
+          </button>
           <div className="game-status">En curso</div>
         </section>
 
