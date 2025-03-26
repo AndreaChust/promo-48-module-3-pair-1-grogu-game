@@ -24,44 +24,43 @@ function App() {
   function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
   }
- 
 
   function rollDice() {
     const randomNumber = getRandomNumber(4);
-    console.log(randomNumber);
+    //console.log(randomNumber);
   }
 
   return (
     <>
-    <div className="page">
-      <Header />
-      <main className="page">
-        <Board />
-        <section>
-          <Dice />
-          <div className="game-status">En curso</div>
-        </section>
+      <div className="page">
+        <Header />
+        <main className="page">
+          <Board />
+          <section>
+            <Dice rollDiceClick={rollDice} />
+            <div className="game-status">En curso</div>
+          </section>
 
-        <section className="goods-container">
-          <div className="goods-item">🍪</div>
-          <div className="goods-item">🍪</div>
-          <div className="goods-item">🍪</div>
-        </section>
-        <section className="goods-container">
-          <div className="goods-item">🥚</div>
-          <div className="goods-item">🥚</div>
-          <div className="goods-item">🥚</div>
-        </section>
-        <section className="goods-container">
-          <div className="goods-item">🐸</div>
-          <div className="goods-item">🐸</div>
-          <div className="goods-item">🐸</div>
-        </section>
-        <section>
-          <button className="restart-button">Reiniciar Juego</button>
-        </section>
-      </main>
-    </div>
+          <section className="goods-container">
+            <div className="goods-item">🍪</div>
+            <div className="goods-item">🍪</div>
+            <div className="goods-item">🍪</div>
+          </section>
+          <section className="goods-container">
+            <div className="goods-item">🥚</div>
+            <div className="goods-item">🥚</div>
+            <div className="goods-item">🥚</div>
+          </section>
+          <section className="goods-container">
+            <div className="goods-item">🐸</div>
+            <div className="goods-item">🐸</div>
+            <div className="goods-item">🐸</div>
+          </section>
+          <section>
+            <button className="restart-button">Reiniciar Juego</button>
+          </section>
+        </main>
+      </div>
     </>
   );
 }
