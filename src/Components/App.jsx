@@ -1,26 +1,44 @@
 import "../scss/App.scss";
+import { useState } from "react";
+import Header from "./Header";
+import Board from "./Board";
+import Dice from "./Dice";
 
 function App() {
+  const [groguPosition, setGroguPosition] = useState(0);
+  const [goodsCookies, setGoodsCookies] = useState(["🍪", "🍪", "🍪"]);
+  const [goodsEggs, setGoodsEggs] = useState(["🥚", "🥚", "🥚"]);
+  const [goodsFrog, setGoodsFrog] = useState(["🐸", "🐸", "🐸"]);
+  const [diceValue, setDiceValue] = useState(null);
+  const [gameStatus, setGameStatus] = useState("En curso");
+
+  /*Cuando hagamos click en Lanzar el dado,
+  -se ejecuta la función de lanzar el dado,
+  -recoger el resultado:
+    Si es 4 --> Grogu debe de avanzar en el tablero y actualizar su posición,
+    Si es 1, 2 o 3 -> una mercancía se eliminará de la lista,
+      -actualizar la lista
+   
+  */
+
+  function getRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
+  }
+  const randomNumber = getRandomNumber(4);
+
+  function rollDice() {
+    getRandomNumber(4);
+    //const resultRandomNumber = randomNumber;
+    console.log(randomNumber);
+  }
+
   return (
     <div className="page">
-      <header>
-        <h1>¡Cuidado con Grogu!</h1>
-      </header>
+      <Header />
       <main className="page">
-        <section className="board">
-          <div className="cell">
-            <div className="grogu">👣</div>
-          </div>
-          <div className="cell"></div>
-          <div className="cell"></div>
-          <div className="cell"></div>
-          <div className="cell"></div>
-          <div className="cell"></div>
-          <div className="cell"></div>
-        </section>
-
+        <Board />
         <section>
-          <button className="dice">Lanzar Dado</button>
+          <Dice />
           <div className="game-status">En curso</div>
         </section>
 
