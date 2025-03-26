@@ -2,6 +2,7 @@ import "../scss/App.scss";
 import { useState } from "react";
 import Header from "./Header";
 import Board from "./Board";
+import Dice from "./Dice";
 
 function App() {
   const [groguPosition, setGroguPosition] = useState(0);
@@ -37,9 +38,7 @@ function App() {
       <main className="page">
         <Board />
         <section>
-          <button className="dice" onClick={rollDice}>
-            Lanzar Dado
-          </button>
+        <Dice />
           <div className="game-status">En curso</div>
         </section>
 
