@@ -28,6 +28,16 @@ function App() {
   function rollDice() {
     const randomNumber = getRandomNumber(4);
     //console.log(randomNumber);
+
+    //     if (randomNumber === 4){
+    // // Grogu avanza en el tablero y actualiza su posición
+    //     } else if (randomNumber === 1){
+    // // Añadimos a las cookies una classlist hidden para que desaparezcan
+    //     } else if (randomNumber === 2){
+    // // Añadimos a los huevos una classlist hidden para que desaparezcan
+    //     } else if (randomNumber === 3){
+    // // Añadimos a las ranas una classlist hidden para que desaparezcan
+    //     }
   }
 
   return (
