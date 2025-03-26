@@ -24,15 +24,15 @@ function App() {
   function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
   }
-  const randomNumber = getRandomNumber(4);
+ 
 
   function rollDice() {
-    getRandomNumber(4);
-    //const resultRandomNumber = randomNumber;
+    const randomNumber = getRandomNumber(4);
     console.log(randomNumber);
   }
 
   return (
+    <>
     <div className="page">
       <Header />
       <main className="page">
@@ -62,6 +62,7 @@ function App() {
         </section>
       </main>
     </div>
+    </>
   );
 }
 

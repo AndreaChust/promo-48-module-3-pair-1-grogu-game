@@ -1,7 +1,12 @@
-function Dice() {
+function Dice(props) {
+    const handleClickDice = () => {
+        props.clickRollDice(randomNumber);
+        console.log(prop)
+    }
+
   return (
     <>
-    <button className="dice" onClick={rollDice}>
+    <button className="dice" onClick={handleClickDice}>
       Lanzar Dado
     </button>
     </>
@@ -9,3 +14,5 @@ function Dice() {
 }
 
 export default Dice;
+
+
